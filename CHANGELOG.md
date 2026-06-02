@@ -38,5 +38,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic test coverage
 - Contribution guidelines
 
-[Unreleased]: https://github.com/Timi16/soroban-debugger/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/Timi16/soroban-debugger/releases/tag/v0.1.0
+[Unreleased]: https://github.com/barry01-hash/soroban-debugger/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/barry01-hash/soroban-debugger/releases/tag/v0.1.0
