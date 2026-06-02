@@ -1,12 +1,52 @@
 # Soroban Debugger
 
-[![CI](https://github.com/Timi16/soroban-debugger/actions/workflows/ci.yml/badge.svg)](https://github.com/Timi16/soroban-debugger/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/Timi16/soroban-debugger/branch/main/graph/badge.svg)](https://codecov.io/gh/Timi16/soroban-debugger)
-[![Latest Release](https://img.shields.io/github/v/release/Timi16/soroban-debugger?logo=github)](https://github.com/Timi16/soroban-debugger/releases)
+[![CI](https://github.com/barry01-hash/soroban-debugger/actions/workflows/ci.yml/badge.svg)](https://github.com/barry01-hash/soroban-debugger/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/barry01-hash/soroban-debugger/branch/main/graph/badge.svg)](https://codecov.io/gh/barry01-hash/soroban-debugger)
+[![Latest Release](https://img.shields.io/github/v/release/barry01-hash/soroban-debugger?logo=github)](https://github.com/barry01-hash/soroban-debugger/releases)
 
 A command-line debugger for Soroban smart contracts on the Stellar network. Debug your contracts interactively with breakpoints, step-through execution, state inspection, and budget tracking.
 
-Check out the [Getting Started Guide](https://github.com/Timi16/soroban-debugger/blob/main/docs/getting-started.md) to begin debugging in under 10 minutes, or see the [FAQ](https://github.com/Timi16/soroban-debugger/blob/main/docs/faq.md) for help with common issues.
+Check out the [Getting Started Guide](docs/getting-started.md) to begin debugging in under 10 minutes, or see the [FAQ](docs/faq.md) for help with common issues.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Installation - From Source](#from-source)
+- [Installation - Using Cargo](#using-cargo)
+- [Installation - Man Page](#man-page)
+- [Quick Start](#quick-start)
+- [Quick Start - Basic Usage](#basic-usage)
+- [Quick Start - Complex Argument Types](#complex-argument-types)
+- [Quick Start - Interactive Mode](#interactive-mode)
+- [Commands](#commands)
+- [Commands - Run Command](#run-command)
+- [Commands - Server Command](#server-command)
+- [Commands - Automatic Test Generation](#automatic-test-generation)
+- [Commands - Watch Mode](#watch-mode)
+- [Commands - Batch Execution](#batch-execution)
+- [Commands - Storage Filtering](#storage-filtering)
+- [Commands - Interactive Command](#interactive-command)
+- [Commands - Inspect Command](#inspect-command)
+- [Commands - Completions Command](#completions-command)
+- [Commands - Compare Command](#compare-command)
+- [Examples](#examples)
+- [Supported Argument Types](#supported-argument-types)
+- [Interactive Commands Reference](#interactive-commands-reference)
+- [Configuration File](#configuration-file)
+- [Accessibility](#accessibility)
+- [Use Cases](#use-cases)
+- [Project Structure](#project-structure)
+- [Development](#development)
+- [Benchmarks](#benchmarks)
+- [Requirements](#requirements)
+- [Contributing](#contributing)
+- [License](#license)
+- [Resources](#resources)
+- [Acknowledgments](#acknowledgments)
+- [Docker](#docker)
+- [Guides](#guides)
+- [JSON Output Mode](#json-output-mode)
 
 
 ## Features
@@ -27,7 +67,7 @@ Check out the [Getting Started Guide](https://github.com/Timi16/soroban-debugger
 ### From Source
 
 ```bash
-git clone https://github.com/Timi16/soroban-debugger.git
+git clone https://github.com/barry01-hash/soroban-debugger.git
 cd soroban-debugger
 cargo install --path .
 ```
@@ -182,7 +222,7 @@ soroban-debug run \
   --watch
 ```
 
-Perfect for development - edit your contract, rebuild, and see results immediately. See [docs/watch-mode.md](https://github.com/Timi16/soroban-debugger/blob/main/docs/watch-mode.md) for details.
+Perfect for development - edit your contract, rebuild, and see results immediately. See [docs/watch-mode.md](docs/watch-mode.md) for details.
 
 ### Batch Execution
 
@@ -212,7 +252,7 @@ The batch args file should contain a JSON array of test cases:
 ]
 ```
 
-See [docs/batch-execution.md](https://github.com/Timi16/soroban-debugger/blob/main/docs/batch-execution.md) for detailed documentation.
+See [docs/batch-execution.md](docs/batch-execution.md) for detailed documentation.
 
 ### Storage Filtering
 
@@ -329,7 +369,7 @@ Options:
       --dependency-graph     Export cross-contract dependency graph (DOT + Mermaid)
 ```
 
-For full examples, see [docs/dependency-graph.md](https://github.com/Timi16/soroban-debugger/blob/main/docs/dependency-graph.md).
+For full examples, see [docs/dependency-graph.md](docs/dependency-graph.md).
 
 ### Completions Command
 
@@ -390,7 +430,7 @@ soroban-debug compare examples/trace_a.json examples/trace_b.json
 soroban-debug compare baseline.json new.json --output diff_report.txt
 ```
 
-See [`doc/compare.md`](https://github.com/Timi16/soroban-debugger/blob/main/docs/doc/compare.md) for the full trace JSON format reference
+See [`doc/compare.md`](docs/doc/compare.md) for the full trace JSON format reference
 and a regression testing workflow guide.
 
 ## Examples
@@ -654,7 +694,7 @@ soroban-debugger/
 ### Building from Source
 
 ```bash
-git clone https://github.com/Timi16/soroban-debugger.git
+git clone https://github.com/barry01-hash/soroban-debugger.git
 cd soroban-debugger
 cargo build --release
 ```
@@ -704,7 +744,7 @@ Benchmarks are run automatically in CI to ensure performance stays within accept
 
 ## Contributing
 
-Contributions are welcome. Please see [CONTRIBUTING.md](https://github.com/Timi16/soroban-debugger/blob/main/CONTRIBUTING.md) for setup, workflow, code style, and PR guidelines.
+Contributions are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for setup, workflow, code style, and PR guidelines.
 
 <!-- ## Roadmap
 
@@ -738,11 +778,11 @@ at your option.
 
 ## Resources
 
-- [FAQ](https://github.com/Timi16/soroban-debugger/blob/main/docs/faq.md) - Common problems and workarounds
+- [FAQ](docs/faq.md) - Common problems and workarounds
 - Soroban Documentation: https://soroban.stellar.org/docs
 - Stellar Developer Discord: https://discord.gg/stellardev
-- Issue Tracker: https://github.com/Timi16/soroban-debugger/issues
-- [CHANGELOG](https://github.com/Timi16/soroban-debugger/blob/main/CHANGELOG.md) - Release history and changes
+- Issue Tracker: https://github.com/barry01-hash/soroban-debugger/issues
+- [CHANGELOG](CHANGELOG.md) - Release history and changes
 
 ## Acknowledgments
 
@@ -775,7 +815,7 @@ docker compose run --rm soroban-debug run --contract /contracts/token.wasm --fun
 ```
 ## Guides
 
-- [Writing Budget-Efficient Soroban Contracts](https://github.com/Timi16/soroban-debugger/blob/main/docs/optimization-guide.md)
+- [Writing Budget-Efficient Soroban Contracts](docs/optimization-guide.md)
 
 
 

@@ -78,7 +78,7 @@ cd soroban-debugger
 3. **Add the upstream remote**:
 
 ```bash
-git remote add upstream https://github.com/Timi16/soroban-debugger.git
+git remote add upstream https://github.com/barry01-hash/soroban-debugger.git
 ```
 
 4. **Create a branch** for your work:

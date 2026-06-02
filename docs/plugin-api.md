@@ -699,4 +699,4 @@ Check `min_debugger_version` in your manifest to specify the minimum required de
 
 - [Example Logger Plugin](../examples/plugins/example_logger/)
 - [Plugin API Reference](https://docs.rs/soroban-debugger/latest/soroban_debugger/plugin/)
-- [GitHub Issues](https://github.com/Timi16/soroban-debugger/issues)
+- [GitHub Issues](https://github.com/barry01-hash/soroban-debugger/issues)

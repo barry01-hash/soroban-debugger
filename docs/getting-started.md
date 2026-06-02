@@ -17,7 +17,7 @@ cargo install soroban-debugger
 
 ### Option B: Download Pre-built Binaries
 
-Download the latest binary for your operating system from the [GitHub Releases](https://github.com/Timi16/soroban-debugger/releases) page. Extract the archive and add the `soroban-debug` executable to your system's PATH.
+Download the latest binary for your operating system from the [GitHub Releases](https://github.com/barry01-hash/soroban-debugger/releases) page. Extract the archive and add the `soroban-debug` executable to your system's PATH.
 
 ---
 

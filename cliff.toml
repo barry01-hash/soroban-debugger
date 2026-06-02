@@ -22,7 +22,7 @@ body = """
 {% for group, commits in commits | group_by(attribute="group") %}
 ### {{ group | striptags | trim }}
 {% for commit in commits %}
-- {{ commit.message | striptags | first_line }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/Timi16/soroban-debugger/commit/{{ commit.id }}))
+- {{ commit.message | striptags | first_line }} ([{{ commit.id | truncate(length=7, end="") }}](https://github.com/barry01-hash/soroban-debugger/commit/{{ commit.id }}))
 {% endfor %}
 {% endfor %}
 """
@@ -51,6 +51,6 @@ filter_commits = []
 [基石]
 # Link replacement rules
 link_parsers = [
-    { pattern = "#(\\d+)", replace = "[#${1}](https://github.com/Timi16/soroban-debugger/issues/${1})" },
-    { pattern = "([0-9a-f]{7})[0-9a-f]*", replace = "[${1}](https://github.com/Timi16/soroban-debugger/commit/${1})" },
+    { pattern = "#(\\d+)", replace = "[#${1}](https://github.com/barry01-hash/soroban-debugger/issues/${1})" },
+    { pattern = "([0-9a-f]{7})[0-9a-f]*", replace = "[${1}](https://github.com/barry01-hash/soroban-debugger/commit/${1})" },
 ]
