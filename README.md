@@ -292,18 +292,17 @@ These traces can later be used with the `compare` command to identify regression
 
 ##### Example Trace Output (JSON)
 
-An exported trace includes versioning, metadata, and full execution state:
+An exported trace includes metadata and full execution state. The trace
+schema is intentionally evolved using backward-compatible, additive
+changes. See the [Execution Trace Schema Evolution Policy](docs/trace-schema.md)
+for the compatibility rules and migration expectations.
 
 ```json
 {
-  "version": "1.0",
   "label": "Execution of hello",
   "contract": "CA7QYNF5GE5XEC4HALXWFVQQ5TQWQ5LF7WMXMEQG7BWHBQV26YCWL5",
   "function": "hello",
   "args": "[\"world\"]",
-  "storage_before": {
-    "counter": "0"
-  },
   "storage": {
     "counter": "1"
   },
@@ -318,11 +317,7 @@ An exported trace includes versioning, metadata, and full execution state:
     {
       "function": "hello",
       "args": "[\"world\"]",
-      "depth": 0,
-      "budget": {
-        "cpu_instructions": 1540,
-        "memory_bytes": 450
-      }
+      "depth": 0
     }
   ],
   "events": [

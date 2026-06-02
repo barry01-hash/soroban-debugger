@@ -79,6 +79,19 @@ except where noted):
 | `call_sequence`  | `array`         | Ordered list of function calls                  |
 | `events`         | `array`         | Events emitted during execution                 |
 
+## Schema evolution policy
+
+Trace files evolve through additive, backward-compatible changes. For
+the full policy, including versioning and migration expectations, see
+[Execution Trace Schema Evolution Policy](../trace-schema.md).
+
+In practice, that means:
+
+- New fields should be optional and serde-defaulted.
+- Existing traces should continue to load after non-breaking changes.
+- Any breaking change should introduce an explicit version field and a
+  documented migration path before the old format is retired.
+
 ## Regression testing workflow
 
 1. **Capture baseline trace** — run your contract and save the execution
